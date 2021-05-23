@@ -12,9 +12,31 @@ This repository builds a docker container with Cosmopolitan Libc from
 And the 'hello-world.c' from
  - https://github.com/jart/cosmopolitan/blob/master/examples/hello.c
 
-And puts the executable into 
+And puts the executable in a docker-container
 
-# usage 
+# usage
+
+## mac
+```
+% ./hello-world.com 
+hello world
+```
+
+## linux
+```
+$ ./hello-world.com 
+hello world
+```
+
+## docker 
+```
+$ docker run --rm marcelmaatkamp/osmopolitan-hello-world
+hello world
+```
+
+# build
+If you want to change the source code, the docker-container or want to extract the binary, use the docker-compose 
 ```
 $ docker-compose up --build
 ```
+The executable will be in 'data/'

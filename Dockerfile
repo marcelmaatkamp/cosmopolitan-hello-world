@@ -6,5 +6,8 @@ RUN \
  chmod +x /hello.com
 
 FROM scratch
-COPY --from=alpine /hello.com /hello.com
+COPY \
+ --from=alpine \
+ /hello.com \
+ /hello.com
 ENTRYPOINT ["/hello.com"]
